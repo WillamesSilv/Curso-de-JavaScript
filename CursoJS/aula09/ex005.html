@@ -19,8 +19,11 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div>Cliqui em mim</div>
     <script>
-       var p1 = document.getElementsByTagName('p')[0]
-       document.write(p1.innerText)/*inerText é o texto que está dentro do paragrafo*/
+        var p1 = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+        document.write("Está escrito assim " + p1.innerText ) /*inerText é o texto que está dentro do paragrafo*/
+        p2.style.color = "Red"
+        document.write('Outra maneira ' + p2.innerHTML)
 
     </script>
 </body>
