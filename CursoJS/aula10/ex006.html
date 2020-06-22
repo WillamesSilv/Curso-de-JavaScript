@@ -7,7 +7,7 @@
     <style>
         div#area{
             font: normal 25pt arial;
-            background-color: #b6b6b6;
+            background-color: #d4d1d1;
             color: #131313;
             width: 400px;
             height: 400px;
@@ -18,12 +18,16 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmousemove="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
         var a = document.getElementById("area")
+        a.addEventListener('click', clicar)
+        a.addEventListener('mousemove', entrar)
+        a.addEventListener('mouseout', sair)
+        
         
         function clicar() {
             a.innerText = 'Clicou!'
@@ -31,12 +35,12 @@
         }
 
         function entrar() {
-            a.style.background = "#13a1a7"
+            a.style.background = "#a0a0a0"
             a.innerText = "Clique aqui."
         }
 
         function sair() {
-            a.style.background = "#b6b6b6"      
+            a.style.background = "#d4d1d1"      
             a.innerText = "Interaja..."  
             }
 
