@@ -7,19 +7,40 @@
     <style>
         div#area{
             font: normal 25pt arial;
-            background-color: #181818;
-            color: #fff;
+            background-color: #b6b6b6;
+            color: #131313;
             width: 400px;
             height: 400px;
             line-height: 400px;
             text-align: center;
+            border-radius: 15px;
         }
     </style>
 </head>
 <body>
-    <div id="area">
+    <div id="area" onclick="clicar()" onmousemove="entrar()" onmouseout="sair()">
         Interaja...
     </div>
+
+    <script>
+        var a = document.getElementById("area")
+        
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+
+        function entrar() {
+            a.style.background = "#13a1a7"
+            a.innerText = "Clique aqui."
+        }
+
+        function sair() {
+            a.style.background = "#b6b6b6"      
+            a.innerText = "Interaja..."  
+            }
+
+    </script>
     
 </body>
 </html>
