@@ -3,24 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DETRAN</title>
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background-color: #ffe9b3;
+            font: normal 18px arial;
+            text-align: center;
+            padding: 5px;
+            margin: 200px;
+        }
+
+        .button {
+            background-color: #98ff8a;
+            border-radius: 8px;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Sistema de multas</h1>
-    <input style="width: 250px;" type="number" name="txtvel" id="txtvel" placeholder="Velocidade do automóvel em km/h">
-    <input type="button" value="Verificar" onclick="calcular()">
+    <h1>Verificando Nacionalidade Brasileira</h1>
+    Nacionalidade <input class="button" type="text" id="pais" placeholder="Digite seu País">
+    <input class="button" type="button" value="verificar" onclick="nacional()">
     <div id="res"></div>
 
     <script>
-        function calcular() {
-            var txtv = document.querySelector("#txtvel")
-            var res = document.querySelector('#res')
-            var vel = Number(txtv.value)
-            res.innerHTML = `<p>Sua velocidade é de <strong>${vel}km/h</strong></p>.`
-            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        function nacional() {
+            var brasil = document.querySelector("#pais")
+            var resp = document.querySelector("#res")
+            var resBrasil = (brasil.value).toUpperCase()
+            resp.innerHTML = `<p>Você nasceu em <strong>${resBrasil}</strong></p>`
+            if (resBrasil == 'BRASIL'){
+                resp.innerHTML += '<p>Você é Brasileiro!</p>'
+            } else {
+                resp.innerHTML += '<p>Você é Estrangeiro!</p>'
+            }
         }
-
     </script>
-
+    
 </body>
 </html>
