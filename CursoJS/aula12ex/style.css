@@ -3,15 +3,23 @@ body {
     font: normal 18px arial;
 }
 
+.style {
+    color: white;
+    text-align: center;
+}
 header {
 
 }
 
 section {
     background: white;
-
+    border-radius: 12px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px #00000088;
 }
 
 footer {
-
+    font-style: italic;
 }
