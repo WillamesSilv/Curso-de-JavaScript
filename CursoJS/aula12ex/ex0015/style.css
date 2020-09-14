@@ -23,3 +23,6 @@ section {
 footer {
     font-style: italic;
 }
+input {
+    cursor: pointer;
+}
