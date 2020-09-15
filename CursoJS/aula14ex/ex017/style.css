@@ -19,6 +19,9 @@ section {
     margin: auto;
     box-shadow: 5px 5px 10px #0a0a0a88;
 }
+div {
+    margin-top: 5px;
+}
 
 footer {
     font-style: italic;
