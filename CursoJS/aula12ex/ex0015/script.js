@@ -3,6 +3,7 @@ function verificar() {
     var ano = data.getFullYear()//ano atual, fullYear o ano com 4 digitos
     var fano = document.getElementById('txtano')//pegando o dado do input
     var res = document.getElementById('res')//selecionando a div
+    //verificando se a caixa esta vazia, ou se o ano é maior que o atual
     if (fano.value.length == 0 || Number(fano.value) > ano) {
         alert('[ERRO!!] Verifique os dados e tente novamente.')
     } else {
